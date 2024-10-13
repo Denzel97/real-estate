@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta id="viewport-tag" name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Real Estate | DenzTech Solutions </title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="76x76" href="images/Denz.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/Denz.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/Denz.png">
+
+    <!-- Bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Custom css -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style.min.css">
+
+
+    <!-- Bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- Custom Js -->
+    <script src="js/scripts.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <!-- Hamburger css -->
+    <style>
+        /* Style the burger menu */
+        .burger-menu {
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .burger-menu span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px 0;
+            background-color: #333;
+        }
+
+        /* Style the nav as a sidebar and hide it initially */
+        .nav {
+            position: fixed;
+            top: 0;
+            right: -250px;
+            /* Hidden off-screen */
+            width: 250px;
+            height: 100%;
+            background-color: #333;
+            transition: right 0.3s ease;
+            /* Slide in effect */
+            z-index: 1000;
+            /* Ensure the nav appears above the content */
+        }
+
+        /* Display the nav when it becomes active (slide-in) */
+        .nav.active {
+            right: 0;
+        }
+
+        .nav ul {
+            list-style-type: none;
+            padding: 20px;
+        }
+
+        .nav li {
+            margin: 10px 0;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+    <!-- Hamburger js -->
+    <script>
+        document.querySelector('.burger-menu').addEventListener('click', function () {
+            var nav = document.getElementById('nav1');
+            nav.classList.toggle('active');
+        });
+
+    </script>
+
+    <!-- JQuery Libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.4.0.js"></script>
+    <script type="text/javascript" src="https://resources.agentimage.com/libraries/js/jquery.elementpeek.min.js"
+        id="aios-elementpeek-script-js"></script>
+
+</head>
+
+<body>
+
+    <main id="main" data-global-indicator="main">
+
+        <div id="mainwrapper">
+            <div class="fixed-menu-backdrop"></div>
+            <div class="fixed-menu">
+                <div class="menu-main-menu-container">
+                    <ul id="burger-menu" class="menu">
+                        <li class="menu-item">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">Listings</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <header id="fixed-header">
+                <div class="hd-wrap">
+                    <div class="logo">
+                        <a href="#">
+                            <img src="images/DenzTech2.png" alt="DenzTech Logo" width="120" height="120">
+                        </a>
+                    </div>
+                    <nav class="nav playfair hidden">
+                        <div class="menu-main-menu-container">
+                            <ul id="fixed-nav" class="menu">
+                                <li class="menu-item">
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#">Listings</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="burger-menu" title="Burger Menu">
+                        <p>Menu</p>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </header>
+
+            <header id="main-header">
+                <div class="container">
+                    <div class="hd-wrap">
+                        <div class="logo">
+                            <a href="#">
+                                <img src="images/DenzTech2.png" alt="DenzTech Logo" width="120" height="120">
+                            </a>
+                        </div>
+                        <nav class="nav" id="nav1">
+                            <div class="container">
+                                <ul id="nav" class="menu">
+                                    <li class="menu-item">
+                                        <a href="index.html">Home</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#">Listings</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <div class="burger-menu" title="Burger Menu">
+                            <p>Menu</p>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div id="inner-page-wrapper">
+                <div class="container">
+                    <div id="ip-listings" class="ip-listings">
+                        <div id="content-full">
+                            <article id="content" class="hfeed listings-hfeed">
+                                <div id="post-351" class="post-351 page type-page status-publish hentry">
+                                    <div class="entry entry-content listings-entry-content rey">
+                                        <div class="listings-wrap">
+                                            <div class="inner-wrap">
+                                                <h1 class="page-title">
+                                                    <span>Active</span>
+                                                    Properties
+                                                </h1>
+                                            </div>
+                                            <div class="listings-list ">
+                                                <div class="listings-item">
+                                                    <a href="#">
+                                                        <canvas width="800" height="400" class="ai-lazy"
+                                                            data-src="images/real_estate.jpg"></canvas>
+                                                        <div class="listings-info">
+                                                            <span class="listings-address didot"> Buruburu Homes
+                                                            </span>
+                                                            <span class="listings-address didot">Nairobi, Kenya
+                                                            </span>
+                                                            <div class="list-price-more-wrap">
+                                                                <span class="listings-price didot">Ksh.
+                                                                    80,000,000</span>
+                                                                <span class="list-more"><span class="listings-more">View
+                                                                        Details</span></span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="listings-item">
+                                                    <a href="#">
+                                                        <canvas width="800" height="400" class="ai-lazy"
+                                                            data-src="images/real_estate2.jpg"></canvas>
+                                                        <div class="listings-info">
+                                                            <span class="listings-address didot"> Kileleshwa Homes
+                                                            </span>
+                                                            <span class="listings-address didot">Nairobi, Kenya
+                                                            </span>
+                                                            <div class="list-price-more-wrap">
+                                                                <span class="listings-price didot">Ksh.
+                                                                    200,000,000</span>
+                                                                <span class="list-more"><span class="listings-more">View
+                                                                        Details</span></span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="listings-item">
+                                                    <a href="#">
+                                                        <canvas width="800" height="400" class="ai-lazy"
+                                                            data-src="images/real_estate.jpg"></canvas>
+                                                        <div class="listings-info">
+                                                            <span class="listings-address didot"> Buruburu Homes
+                                                            </span>
+                                                            <span class="listings-address didot">Nairobi, Kenya
+                                                            </span>
+                                                            <div class="list-price-more-wrap">
+                                                                <span class="listings-price didot">Ksh.
+                                                                    80,000,000</span>
+                                                                <span class="list-more"><span class="listings-more">View
+                                                                        Details</span></span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="listings-item">
+                                                    <a href="#">
+                                                        <canvas width="800" height="400" class="ai-lazy"
+                                                            data-src="images/real_estate2.jpg"></canvas>
+                                                        <div class="listings-info">
+                                                            <span class="listings-address didot"> Kileleshwa Homes
+                                                            </span>
+                                                            <span class="listings-address didot">Nairobi, Kenya
+                                                            </span>
+                                                            <div class="list-price-more-wrap">
+                                                                <span class="listings-price didot">Ksh.
+                                                                    200,000,000</span>
+                                                                <span class="list-more"><span class="listings-more">View
+                                                                        Details</span></span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="listings-item">
+                                                    <a href="#">
+                                                        <canvas width="800" height="400" class="ai-lazy"
+                                                            data-src="images/real_estate.jpg"></canvas>
+                                                        <div class="listings-info">
+                                                            <span class="listings-address didot"> Buruburu Homes
+                                                            </span>
+                                                            <span class="listings-address didot">Nairobi, Kenya
+                                                            </span>
+                                                            <div class="list-price-more-wrap">
+                                                                <span class="listings-price didot">Ksh.
+                                                                    80,000,000</span>
+                                                                <span class="list-more"><span class="listings-more">View
+                                                                        Details</span></span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="listings-item">
+                                                    <a href="#">
+                                                        <canvas width="800" height="400" class="ai-lazy"
+                                                            data-src="images/real_estate2.jpg"></canvas>
+                                                        <div class="listings-info">
+                                                            <span class="listings-address didot"> Kileleshwa Homes
+                                                            </span>
+                                                            <span class="listings-address didot">Nairobi, Kenya
+                                                            </span>
+                                                            <div class="list-price-more-wrap">
+                                                                <span class="listings-price didot">Ksh.
+                                                                    200,000,000</span>
+                                                                <span class="list-more"><span class="listings-more">View
+                                                                        Details</span></span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="listings-item">
+                                                    <a href="#">
+                                                        <canvas width="800" height="400" class="ai-lazy"
+                                                            data-src="images/real_estate.jpg"></canvas>
+                                                        <div class="listings-info">
+                                                            <span class="listings-address didot"> Buruburu Homes
+                                                            </span>
+                                                            <span class="listings-address didot">Nairobi, Kenya
+                                                            </span>
+                                                            <div class="list-price-more-wrap">
+                                                                <span class="listings-price didot">Ksh.
+                                                                    80,000,000</span>
+                                                                <span class="list-more"><span class="listings-more">View
+                                                                        Details</span></span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="listings-item">
+                                                    <a href="#">
+                                                        <canvas width="800" height="400" class="ai-lazy"
+                                                            data-src="images/real_estate2.jpg"></canvas>
+                                                        <div class="listings-info">
+                                                            <span class="listings-address didot"> Kileleshwa Homes
+                                                            </span>
+                                                            <span class="listings-address didot">Nairobi, Kenya
+                                                            </span>
+                                                            <div class="list-price-more-wrap">
+                                                                <span class="listings-price didot">Ksh.
+                                                                    200,000,000</span>
+                                                                <span class="list-more"><span class="listings-more">View
+                                                                        Details</span></span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="listings-search">
+                                        <div class="inner-wrap">
+                                            <div class="listings-qs">
+                                                <div class="qs-inner">
+                                                    <div class="qs-title">
+                                                        <span>Search Lorem Ipsum</span>
+                                                    </div>
+                                                    <div class="qs-wrap">
+                                                        <form action="#" method="GET">
+                                                            <div class="qs-col">
+                                                                <label>Address</label>
+                                                                <input type="text" aria-label="qsaddress"
+                                                                    name="s_address" value="" />
+                                                            </div>
+                                                            <div class="qs-col">
+                                                                <label>City</label>
+                                                                <select aria-label="qsarea" name="city">
+                                                                    <option value="">All</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="qs-col">
+                                                                <label>Status</label>
+                                                                <select aria-label="qssearchtype" name="status">
+                                                                    <option value="">All</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="qs-col">
+                                                                <label>Type</label>
+                                                                <select aria-label="qsprotype" name="type">
+                                                                    <option value="">All</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="qs-col nomar">
+                                                                <label>Price</label>
+                                                                <input type="text" class="js-range-slider"
+                                                                    name="my_range" value="" />
+                                                            </div>
+                                                            <div class="qs-col nomar ip-sl-submit-btn">
+                                                                <input type="submit"
+                                                                    class="barlow-con text-uppercase transition"
+                                                                    value="Search">
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+
+            <footer id="footer">
+                <div class="container">
+                    <div class="footer-logo">
+                        <a href="#">
+                            <img src="images/DenzTech2.png" alt="DenzTech" width="90" height="90">
+                        </a>
+                    </div>
+                    <div class="footer-nav">
+                        <div class="footer-nav-list">
+                            <h2 class="didot"><a href="#">PROPERTIES</a>
+                            </h2>
+                            <ul>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-nav-list">
+                            <h2 class="didot"><a href="#">OUR TEAM</a></h2>
+                            <ul>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-nav-list">
+                            <h2 class="didot"><a href="#">EXPLORE</a></h2>
+                            <ul>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                            </ul>
+                        </div><!-- end of footer nav lists -->
+                        <div class="footer-nav-list">
+                            <h2 class="didot"><a href="#">CONTACT US</a></h2>
+                            <ul>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-neighboorhoods">
+                        <h3 class="didot"><a href="#">NEIGHBORHOODS</a></h3>
+                        <div class="ftr-neigh">
+                            <ul>
+                                <li><a href="#">Lorem ipsum dolor</a></li>
+                                <li><a href="#">Lorem ipsum dolor</a></li>
+                                <li><a href="#">Lorem ipsum dolor</a></li>
+                                <li><a href="#">Lorem ipsum dolor</a></li>
+                                <li><a href="#">Lorem ipsum dolor</a></li>
+                                <li><a href="#">Lorem ipsum dolor</a></li>
+                                <li><a href="#">Lorem ipsum dolor</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#">Lorem ipsum dolor</a></li>
+                                <li><a href="#">Lorem ipsum dolor</a></li>
+                                <li><a href="#">Lorem ipsum dolor</a></li>
+                                <li><a href="#">Lorem ipsum dolor</a></li>
+                                <li><a href="#">Lorem ipsum dolor</a></li>
+                                <li><a href="#">Lorem ipsum dolor</a></li>
+                                <li><a href="#">Lorem ipsum dolor</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#">Lorem ipsum dolor</a></li>
+                                <li><a href="#">Lorem ipsum dolor</a></li>
+                                <li><a href="#">Lorem ipsum dolor</a></li>
+                                <li><a href="#">Lorem ipsum dolor</a></li>
+                                <li><a href="#">Lorem ipsum dolor</a></li>
+                                <li><a href="#">Lorem ipsum dolor</a></li>
+                                <li><a href="#">Lorem ipsum dolor</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#">Lorem ipsum dolor</a></li>
+                                <li><a href="#">Lorem ipsum dolor</a></li>
+                                <li><a href="#">Lorem ipsum dolor</a></li>
+                                <li><a href="#">Lorem ipsum dolor</a></li>
+                                <li><a href="#">Lorem ipsum dolor</a></li>
+                                <li><a href="#">Lorem ipsum dolor</a></li>
+                                <li><a href="#">Lorem ipsum dolor</a></li>
+                            </ul>
+                        </div>
+                        <br><br>
+                    </div>
+
+                    <div class="footernav-links">
+                        <div class="menu-main-menu-container">
+                            <ul id="footernavlinks" class="menu">
+                                <li class="menu-item">
+                                    <a href="#">Title</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item"><a href="#">Lorem ipsum</a></li>
+                                        <li class="menu-item"><a href="#">Lorem ipsum</a></li>
+                                        <li class="menu-item"><a href="#">Lorem ipsum</a></li>
+                                        <li class="menu-item"><a href="#">Lorem ipsum</a></li>
+                                        <li class="menu-item"><a href="#">Lorem ipsum</a></li>
+                                        <li class="menu-item"><a href="#">Lorem ipsum</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#">Title</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item"><a href="#">Lorem ipsum</a></li>
+                                        <li class="menu-item"><a href="#">Lorem ipsum</a></li>
+                                        <li class="menu-item"><a href="#">Lorem ipsum</a></li>
+                                        <li class="menu-item"><a href="#">Lorem ipsum</a></li>
+                                        <li class="menu-item"><a href="#">Lorem ipsum</a></li>
+                                        <li class="menu-item"><a href="#">Lorem ipsum</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#">Title</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item"><a href="#">Lorem ipsum</a></li>
+                                        <li class="menu-item"><a href="#">Lorem ipsum</a></li>
+                                        <li class="menu-item"><a href="#">Lorem ipsum</a></li>
+                                        <li class="menu-item"><a href="#">Lorem ipsum</a></li>
+                                        <li class="menu-item"><a href="#">Lorem ipsum</a></li>
+                                        <li class="menu-item"><a href="#">Lorem ipsum</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#">Title</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item"><a href="#">Lorem ipsum</a></li>
+                                        <li class="menu-item"><a href="#">Lorem ipsum</a></li>
+                                        <li class="menu-item"><a href="#">Lorem ipsum</a></li>
+                                        <li class="menu-item"><a href="#">Lorem ipsum</a></li>
+                                        <li class="menu-item"><a href="#">Lorem ipsum</a></li>
+                                        <li class="menu-item"><a href="#">Lorem ipsum</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#">Title</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item"><a href="#">Lorem ipsum</a></li>
+                                        <li class="menu-item"><a href="#">Lorem ipsum</a></li>
+                                        <li class="menu-item"><a href="#">Lorem ipsum</a></li>
+                                        <li class="menu-item"><a href="#">Lorem ipsum</a></li>
+                                        <li class="menu-item"><a href="#">Lorem ipsum</a></li>
+                                        <li class="menu-item"><a href="#">Lorem ipsum</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#">Title</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item"><a href="#">Lorem ipsum</a></li>
+                                        <li class="menu-item"><a href="#">Lorem ipsum</a></li>
+                                        <li class="menu-item"><a href="#">Lorem ipsum</a></li>
+                                        <li class="menu-item"><a href="#">Lorem ipsum</a></li>
+                                        <li class="menu-item"><a href="#">Lorem ipsum</a></li>
+                                        <li class="menu-item"><a href="#">Lorem ipsum</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer-copyright">
+                        <p>
+                            <a href="#">LOREM IPSUM DOLOR</a> | <a href="#">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit.</a><br>
+                            © Copyright 2024 Lorem ipsum dolor. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </p>
+                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget nunc ut neque
+                            vestibulum pellentesque. Vivamus vel mauris a nibh pulvinar laoreet. Curabitur dignissim
+                            mattis mi vel dictum. In at auctor urna, gravida blandit nisi. Aenean accumsan, augue id
+                            venenatis mollis, eros arcu tempus dolor, eget tempus sem velit et quam. Nam consectetur
+                            consectetur quam sed rhoncus. Aenean velit justo, varius ut arcu at, tincidunt lobortis
+                            lorem. Sed sollicitudin aliquet turpis at vestibulum. Ut in congue sapien. Sed vitae lectus
+                            id dolor pellentesque aliquet. Sed lectus massa, luctus ac ultricies id, dictum sed felis.
+                            Nam dignissim, diam a pharetra dapibus, risus dolor finibus augue, ut tincidunt turpis
+                            tellus eget est.
+                        </span>
+                        <br><br><br><br><br>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+    </main>
+
+
+</body>
+
+</html>
